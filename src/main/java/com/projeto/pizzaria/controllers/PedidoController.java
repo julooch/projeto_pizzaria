@@ -33,7 +33,7 @@ public class PedidoController {
     public Pedido findById(@PathVariable long id){
         Optional<Pedido> resultado = this.pedidoRepository.findById(id);
         if (resultado.isEmpty()){
-            throw new RuntimeException("Pedido não encontrada!");
+            throw new RuntimeException("Pedido não encontrado!");
         }else{
             return resultado.get();
         }
